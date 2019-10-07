@@ -8,17 +8,28 @@
     <title>Gravity</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
     <link rel="stylesheet" href="css/main.css">
-    <link href="https://fonts.googleapis.com/css?family=Fira+Sans&display=swap" rel="stylesheet">
+   
+    <link href="https://fonts.googleapis.com/css?family=Fira+Sans:400,500,700&display=swap" rel="stylesheet">
 </head>
 <body>
 
+<%
+const slider1 = [
+{src: 'WmVLcj-XKnM', img: 'sliderImg1.jpg'},
+{src: 'IUN664s7N-c', img: 'sliderImg2.jpg'},
+{src: 'fEErySYqItI', img: 'sliderImg3.jpg'},
+{src: 'JhXT4ogzvL4', img: 'sliderImg4.jpg'},
+{src: '3AH9eAFeOsM', img: 'sliderImg5.jpg'}
+];
+
+%>
 <!-- Header -->
 
 <header class="header">
     <div class="navbar">
         <div class="container">
             <div class="navbar-logo">
-                <object class="header-logo__svg" type="image/svg+xml" data="img/Logo.svg" width="20%" height="20px">
+                <object class="header-logo__svg" type="image/svg+xml" data="img/Logo.svg" width="75px" height="35px">
                 </object>
             </div>
             <div class="navbar-search">
@@ -36,16 +47,17 @@
                         <label class="menu__toggle" for="toggle-menu"> </label>
                     </div>
                     <ul class="menu__wrap">
-                        <li class="menu__item"><a href="#" class="menu__link">Home</a></li>
-                        <li class="menu__item"><a href="#" class="menu__link">Work Details</a></li>
-                        <li class="menu__item"><a href="#" class="menu__link">Contact</a></li>
+                        <li class="menu__item"><a href="#" class="menu__link">Gravity</a></li>
+                        <li class="menu__item"><a href="#" class="menu__link">Services</a></li>
+                        <li class="menu__item"><a href="#" class="menu__link">Our works</a></li>
+                        <li class="menu__item"><a href="#" class="menu__link">Tesimonials</a></li>
                     </ul>
                 </nav>
             </div>
         </div>
     </div>
 </header>
-<section class="content">
+<section class="content content_bg">
     <div class="container">
         <div class="content-text">
             <h1 class="content-text__title">Work around you and your team</h1>
@@ -55,16 +67,81 @@
 
         </div>
         <div  class="content-video">
-            <a    class="content-video__item" data-fancybox href="https://www.youtube.com/watch?v=_sI_Ps7JSEk">
+            <a  class="content-video__item" data-fancybox href="https://www.youtube.com/watch?v=_sI_Ps7JSEk">
                 <img  class="content-video__img" src="../img/videopreset.png" alt="">
-            </a>
+                <img class="content-video__button" src="../img/Play Button Primary.svg" alt="">
+            </a>        
         </div>
-
-
     </div>
 </section>
-<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<section class="content">
+     <div class="container">
+         <div>
+             <img src="../img/img1.jpg" alt="" class="content-text__img">
+        
+         </div>
+         <div class="content-text content-text_width">
+             <h3 class="content-text__title content-text__title_size content-text__title_position">We solve digital problems with an outstanding creative
+                 flare</h3>
+             <p class="content-text__article content-text__article_position">The best time to view the moon, obviously, is at night when there are few
+                 clouds and the weather is accommodating for a long and lasting study. 
+                 <br><br>
+                 For most of us, the idea of astronomy is something we directly connect to “stargazing”, telescopes and seeing magnificent displays
+                 in the heavens.</p>
+
+                 <div class="avatar-block">
+                     <a href=""> <img src="../img/Ellipse.png" alt="" class="avatar-block__img"></a>
+                     <a href="#"><span class="avatar-block__name">Denis Shepovalov</span></a>
+                     <span class="avatar-block__article">Co-Founder & CEO</span>
+                 </div>
+         </div>
+     </div>
+</section>
+
+<section class="services">
+    <div class="container">
+        <span class="block-title"> Services</span>
+        <div class="content-text_width">
+            <h3 class="content-text__title content-text__title_size">We love work hard and explore new things that’s why we cover lot of things. Check our service list and view details</h3>
+        </div>
+        <div class="services__link">
+            <ul class="services-list">
+                <li class="services-list__item"><a class="services-list__link" href="">Multimedia</a></li>
+                <li class="services-list__item"><a class="services-list__link" href="">Interactive design</a> </li>
+                <li class="services-list__item"><a class="services-list__link" href="">Packaging</a> </li>
+                <li class="services-list__item"><a class="services-list__link" href="">Branding</a> </li>
+                <li class="services-list__item"><a class="services-list__link" href="">Creative Strategy</a> </li>
+                <li class="services-list__item"><a class="services-list__link"  href="">UI/UX</a> </li>
+                <li class="services-list__item"><a class="services-list__link"  href="">Coding</a> </li>
+            </ul>
+        </div>
+    </div>
+
+   
+    <div class="container">
+        <div class="services-slider">
+            <button id="prev">⇦</button>
+            <button id="next">⇨</button>
+            <ul class="services-slider__container">
+               
+            
+            <% slider1.forEach((item) => { %>
+            <li class="services-slider__item">
+            
+                <a data-fancybox href="https://youtu.be/<%= item.src; %>&amp;autoplay=1&amp;rel=0&amp;controls=0&amp;showinfo=0">
+                    <div class="services-slider__icon"></div>
+                    <img class="services-slider__img" src="../img/<%= item.img;%>" alt="">
+                </a>
+            </li>
+            <% }) %>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+
 <script src="js/scripts.js"></script>
 </body>
 </html>

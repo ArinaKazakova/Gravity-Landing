@@ -5,6 +5,7 @@
 // ## Minimum values for device width
 @xs-min: 320px; // extra small
 @sm-min: 768px; // small
+@lapp: 960px;
 @md-min: 1180px; // middle
 @lg-min: 1400px; // large
 
@@ -19,7 +20,7 @@
 
 @tablet: ~"only screen and (min-width: @{sm-min})";
 @tablet-strict: ~"only screen and (min-width: @{sm-min}) and (max-width: @{sm-max})";
-
+@laptop: ~"only screen and (min-width: @{lapp}) and (max-width: @{sm-max})";
 @desktop: ~"only screen and (min-width: @{md-min})";
 @desktop-strict: ~"only screen and (min-width: @{md-min}) and (max-width: @{md-max})";
 
