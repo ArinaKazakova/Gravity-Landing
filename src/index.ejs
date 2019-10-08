@@ -120,8 +120,8 @@ const slider1 = [
    
     <div class="container">
         <div class="services-slider">
-            <button id="prev">⇦</button>
-            <button id="next">⇨</button>
+            <button id="prev"></button>
+            <button id="next"></button>
             <ul class="services-slider__container">
                
             
@@ -131,6 +131,7 @@ const slider1 = [
                 <a data-fancybox href="https://youtu.be/<%= item.src; %>&amp;autoplay=1&amp;rel=0&amp;controls=0&amp;showinfo=0">
                     <div class="services-slider__icon"></div>
                     <img class="services-slider__img" src="../img/<%= item.img;%>" alt="">
+                    <img class="content-video__button content-video__button_position" src="../img/Play Button Primary.svg" alt="">
                 </a>
             </li>
             <% }) %>
