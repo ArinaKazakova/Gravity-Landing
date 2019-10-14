@@ -15,11 +15,11 @@
 
 <%
 const slider1 = [
-{src: 'WmVLcj-XKnM', img: 'sliderImg1.jpg'},
-{src: 'IUN664s7N-c', img: 'sliderImg2.jpg'},
-{src: 'fEErySYqItI', img: 'sliderImg3.jpg'},
-{src: 'JhXT4ogzvL4', img: 'sliderImg4.jpg'},
-{src: '3AH9eAFeOsM', img: 'sliderImg5.jpg'}
+{src: 'WmVLcj-XKnM', img: 'img/sliderImg1.jpg'},
+{src: 'IUN664s7N-c', img: 'img/sliderImg2.jpg'},
+{src: 'fEErySYqItI', img: 'img/sliderImg3.jpg'},
+{src: 'JhXT4ogzvL4', img: 'img/sliderImg4.jpg'},
+{src: '3AH9eAFeOsM', img: 'img/sliderImg5.jpg'}
 ];
 
 %>
@@ -68,8 +68,8 @@ const slider1 = [
         </div>
         <div  class="content-video">
             <a  class="content-video__item" data-fancybox href="https://www.youtube.com/watch?v=_sI_Ps7JSEk">
-                <img  class="content-video__img" src="../img/videopreset.png" alt="">
-                <img class="content-video__button" src="../img/Play Button Primary.svg" alt="">
+                <img  class="content-video__img" src="img/videopreset.png" alt="">
+                <img class="content-video__button" src="img/Play Button Primary.svg" alt="">
             </a>        
         </div>
     </div>
@@ -77,7 +77,7 @@ const slider1 = [
 <section class="content">
      <div class="container">
          <div>
-             <img src="../img/img1.jpg" alt="" class="content-text__img">
+             <img src="img/img1.jpg" alt="" class="content-text__img">
         
          </div>
          <div class="content-text content-text_width">
@@ -90,7 +90,7 @@ const slider1 = [
                  in the heavens.</p>
 
                  <div class="avatar-block">
-                     <a href=""> <img src="../img/Ellipse.png" alt="" class="avatar-block__img"></a>
+                     <a href=""> <img src="img/Ellipse.png" alt="" class="avatar-block__img"></a>
                      <a href="#"><span class="avatar-block__name">Denis Shepovalov</span></a>
                      <span class="avatar-block__article">Co-Founder & CEO</span>
                  </div>
@@ -130,8 +130,8 @@ const slider1 = [
             
                 <a data-fancybox href="https://youtu.be/<%= item.src; %>&amp;autoplay=1&amp;rel=0&amp;controls=0&amp;showinfo=0">
                     <div class="services-slider__icon"></div>
-                    <img class="services-slider__img" src="../img/<%= item.img;%>" alt="">
-                    <img class="content-video__button content-video__button_position" src="../img/Play Button Primary.svg" alt="">
+                    <img class="services-slider__img" src="<%= item.img;%>" alt="">
+                    <img class="content-video__button content-video__button_position" src="img/Play Button Primary.svg" alt="">
                 </a>
             </li>
             <% }) %>
